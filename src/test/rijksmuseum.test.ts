@@ -110,7 +110,7 @@ describe("Museum data", () => {
             });
             res.on('end', () => {
                 console.log(rawData)
-                dœone()
+                done()
             });
         }).on('error', (e) => {
             console.error(`Got error: ${e.message}`);
