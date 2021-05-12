@@ -1,0 +1,44 @@
+{
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "*",
+    "@babel/preset-typescript": "*",
+    "@types/jest": "*",
+    "babel-jest": "*",
+    "jest": "*",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^9.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "engines": {
+    "node": ">=15.12.0"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "setupFiles": [
+      "jest.config.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.{test}.{js,jsx,ts,tsx}"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx",
+      "json"
+    ]
+  },
+  "scripts": {
+    "lint": "npm-run-all -c lint:*",
+    "lint:eslint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "npm run lint:eslint -- --fix && npm run lint:stylelint -- --fix ",
+    "test": "jest"
+  }
+}
