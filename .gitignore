@@ -1,3 +1,5 @@
 .docz
 .idea
 node_modules/
+
+/jupyter/data
